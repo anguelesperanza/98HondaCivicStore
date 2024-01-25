@@ -1,14 +1,14 @@
-import NavigationItem from './NavigationItem';
+import NavigationItem from "./NavigationItem";
 
 function NavigationBar() {
   const navigation = [
-    { title: 'Product', link: 'product' },
-    { title: 'Accessories', link: 'accessories' },
-    { title: 'Gallery', link: 'gallery' },
-    { title: 'Cart', link: 'cart' },
+    { title: "Product", link: "product" },
+    { title: "Accessories", link: "accessories" },
+    { title: "Gallery", link: "gallery" },
+    { title: "Cart", link: "cart" },
   ];
   return (
-    <nav>
+    <nav id={"topnav"}>
       <ul>
         {navigation.map((navItem, index) => (
           <NavigationItem
