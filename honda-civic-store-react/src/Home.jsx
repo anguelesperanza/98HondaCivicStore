@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       <p>Please by my Honda Civic</p>
-      <img id={"spin"} src={imgURL} alt="placeholder" />
+      <img id={"spins"} src={imgURL} alt="placeholder" />
     </div>
   );
 }

@@ -1,4 +1,10 @@
-function Gallery() {
-  return <p>This is the Gallery Page</p>;
+function Gallery({images = []}) {
+return (
+  <>
+    {images.map((image, index) => (
+      <li key={index}>{image.imageURL}</li>
+    ))}
+  </>
+);
 }
 export default Gallery;
