@@ -1,3 +1,4 @@
+// Code will hvae comments
 // This is the main application that React Runs
 
 import NavigationBar from "./NavigationBar";
