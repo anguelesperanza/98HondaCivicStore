@@ -8,6 +8,7 @@ import Accessories from "./Accessories";
 import Gallery from "./Gallery";
 import Cart from "./Cart";
 import Home from "./Home";
+import Footer from "./Footer";
 
 import "./App.css";
 
@@ -37,6 +38,7 @@ function App() {
         {/* Routs to carts page */}
         <Route path="/cart" element={<Cart />} />
       </Routes>
+      <Footer/>
     </div>
   );
 }

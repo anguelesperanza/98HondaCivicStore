@@ -2,6 +2,7 @@ import NavigationItem from "./NavigationItem";
 
 function NavigationBar() {
   const navigation = [
+    { title: "Home", link: "home"},
     { title: "Product", link: "product" },
     { title: "Accessories", link: "accessories" },
     { title: "Gallery", link: "gallery" },

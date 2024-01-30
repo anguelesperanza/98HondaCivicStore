@@ -1,18 +1,40 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function Accessories() {
-  // Commented out do to lack of time to properly implement
-  // const initialData = [];
-  // const [dataAccessories, setData] = useState(initialData);
-
-  // const getData = function () {
-  //   fetch("../../server/data.json")
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setData(data);
-  //     });
-  // };
-
-  return <p>This is the Accessories page</p>;
+  const [accessories, setAccessories] = useState([]);
+  const getAccessories = function () {
+    fetch("http://localhost:3000/accessories")
+      .then((response) => response.json())
+      .then((data) => {
+        setAccessories(data);
+      });
+  };
+  useEffect(() => {
+    getAccessories();
+  }, []);
+  return (
+    <div className="page">
+      <h1>Accessories</h1>
+      <table>
+        <tbody>
+          <tr>
+            <th>Accessory Name </th>
+            <th>Accessory Desc </th>
+            <th>Accessory price </th>
+          </tr>
+          {accessories.map((accessory) => {
+            return (
+              <tr key={accessory.accessoryName}>
+                <td>{accessory.accessoryName}</td>
+                <td>{accessory.description}</td>
+                <td>{accessory.price}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      ;
+    </div>
+  );
 }
 export default Accessories;
